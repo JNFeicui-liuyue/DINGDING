@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.dingding.R;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-public class ServiceAgreementActivity extends AppCompatActivity {
+public class ServiceAgreementActivity extends AutoLayoutActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

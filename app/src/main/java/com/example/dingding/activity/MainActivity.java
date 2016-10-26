@@ -21,6 +21,7 @@ import com.example.dingding.fragment.InfoFragment;
 import com.example.dingding.fragment.LinkmanFragment;
 import com.example.dingding.fragment.MineFragment;
 import com.example.dingding.fragment.WorkFragment;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ import butterknife.ButterKnife;
 /**
  * 主界面,下方导航栏
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AutoLayoutActivity {
 
     private List<Fragment> mFragmentList;
     private Class mClass[] = {InfoFragment.class,
@@ -83,13 +84,17 @@ public class MainActivity extends AppCompatActivity {
 
         mFragmentList = new ArrayList<>();
 
+        //找到TabHost
         mTabhost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
         mTabhost.getTabWidget().setDividerDrawable(null);
 
         for (int i = 0; i < mFragment.length; i++) {
+            //给每个Tab按钮设置图标,文字和内容
             TabHost.TabSpec tabSpec = mTabhost.newTabSpec(mTitles[i]).setIndicator(getTabView(i));
+            // 将Tab按钮添加进Tab选项卡中
             mTabhost.addTab(tabSpec,mClass[i],null);
             mFragmentList.add(mFragment[i]);
+            // 设置Tab按钮的背景
             mTabhost.getTabWidget().getChildAt(i).setBackgroundColor(Color.WHITE);
         }
 

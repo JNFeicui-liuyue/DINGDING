@@ -17,7 +17,7 @@
         android:id="@+id/view1"
         android:layout_below="@id/actionbar_register"
         android:layout_width="match_parent"
-        android:layout_height="180px"/>
+        android:layout_height="120px"/>
 
     <RelativeLayout
 
@@ -58,12 +58,12 @@
         android:id="@+id/view5"
         android:layout_below="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="30px"/>
+        android:layout_height="10px"/>
 
     <View
         android:layout_marginLeft="10px"
         android:id="@+id/line1"
-        android:background="#686869"
+        android:background="#b7b7bc"
         android:layout_below="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
@@ -72,12 +72,12 @@
         android:id="@+id/view2"
         android:layout_below="@id/line1"
         android:layout_width="match_parent"
-        android:layout_height="80px"/>
+        android:layout_height="30px"/>
 
     <View
         android:layout_marginLeft="10px"
         android:id="@+id/line2"
-        android:background="#686869"
+        android:background="#b7b7bc"
         android:layout_below="@+id/view6"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
@@ -90,11 +90,11 @@
 
     <Button
         android:text="下一步"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:id="@+id/register_btn"
         android:layout_below="@+id/view3"
-        android:background="@drawable/enterdingding"
+        android:background="@drawable/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20px"
@@ -143,30 +143,16 @@
 
         <com.example.dingding.ben.utils.ClearEditText
             android:background="#ffffff"
-            android:layout_toRightOf="@+id/line"
             android:gravity="center_vertical"
-            android:layout_marginLeft="10px"
+            android:layout_marginLeft="60px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入手机号码"
             android:layout_marginRight="40px"
-            android:layout_toEndOf="@+id/tv_phone_number"
+            android:layout_toRightOf="@+id/tv_phone_number"
             android:layout_marginStart="38dp"
             android:id="@+id/editText"
             />
-
-        <!--<EditText-->
-            <!--android:background="#ffffff"-->
-            <!--android:hint="手机号码"-->
-            <!--android:textSize="18sp"-->
-            <!--android:gravity="center_vertical"-->
-            <!--android:layout_marginLeft="100px"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:layout_toEndOf="@+id/tv_phone_number"-->
-            <!--android:layout_marginStart="38dp"-->
-            <!--/>-->
 
     </RelativeLayout>
 
@@ -174,6 +160,6 @@
         android:id="@+id/view6"
         android:layout_below="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="30px"/>
+        android:layout_height="10px"/>
 
 </RelativeLayout>

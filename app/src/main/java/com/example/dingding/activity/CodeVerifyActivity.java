@@ -10,12 +10,13 @@ import android.widget.EditText;
 import com.example.dingding.R;
 import com.example.dingding.ben.commons.ActivityUtils;
 import com.example.dingding.ben.utils.HMActionBar;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CodeVerifyActivity extends AppCompatActivity {
+public class CodeVerifyActivity extends AutoLayoutActivity {
 
     private ActivityUtils mActivityUtils;
 

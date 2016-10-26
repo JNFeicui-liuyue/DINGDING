@@ -2,13 +2,13 @@
     >
 
     <!-- 实心 -->
-    <solid android:color="#f2f0ee"/>
+    <solid android:color="#f2f1ee"/>
 
     <!-- 描边 -->
     <stroke
         android:tint="#38ADFF"
         android:width="2dp"
-        android:color="#d9d5d5" />
+        android:color="#d4d2d2" />
     <!-- 圆角 -->
     <corners
         android:radius="5dp" />

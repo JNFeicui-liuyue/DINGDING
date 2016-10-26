@@ -15,12 +15,13 @@ import android.widget.PopupWindow;
 
 import com.example.dingding.R;
 import com.example.dingding.ben.commons.ActivityUtils;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AutoLayoutActivity {
 
     private ActivityUtils activityUtils; // Activity常用工具集
     private PopupWindow mPopupWindow;

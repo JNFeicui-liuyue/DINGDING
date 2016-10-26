@@ -12,7 +12,7 @@
         android:id="@+id/view1"
         android:layout_below="@+id/iv_login_icon"
         android:layout_width="match_parent"
-        android:layout_height="80px"></View>
+        android:layout_height="70px"></View>
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
@@ -52,7 +52,7 @@
             android:id="@+id/login_edt_username"
             android:layout_toRightOf="@+id/line"
             android:gravity="center_vertical"
-            android:layout_marginLeft="10px"
+            android:layout_marginLeft="20px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入手机号码"
@@ -65,7 +65,7 @@
         android:layout_marginLeft="40px"
         android:layout_marginRight="40px"
         android:id="@+id/line1"
-        android:background="#686869"
+        android:background="#c7c7ca"
         android:layout_below="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
@@ -97,7 +97,7 @@
             android:id="@+id/login_edt_pwd"
             android:layout_toRightOf="@+id/tv_word1"
             android:gravity="center_vertical"
-            android:layout_marginLeft="90px"
+            android:layout_marginLeft="75px"
             android:layout_marginRight="40px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -110,16 +110,7 @@
         android:id="@+id/view3"
         android:layout_below="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="30px"/>
-
-    <View
-        android:layout_marginLeft="40px"
-        android:layout_marginRight="40px"
-        android:id="@+id/line2"
-        android:background="#686869"
-        android:layout_below="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="1px"/>
+        android:layout_height="20px"/>
 
     <View
         android:id="@+id/view11"
@@ -137,8 +128,8 @@
         android:background="@drawable/enterdingding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20px"
-        android:layout_marginRight="20px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
         android:layout_centerHorizontal="true"/>
 
     <View
@@ -154,9 +145,9 @@
         android:layout_below="@+id/view13">
 
         <TextView
-            android:layout_marginLeft="20px"
+            android:layout_marginLeft="30px"
             android:text="新用户注册"
-            android:textColor="#78bfdc"
+            android:textColor="#54b1d7"
             android:id="@+id/tv_newuser_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -164,9 +155,9 @@
         <TextView
             android:layout_alignParentRight="true"
             android:text="使用验证码登录"
-            android:textColor="#84C3DD"
+            android:textColor="#54b1d7"
             android:id="@+id/tv_code_login"
-            android:layout_marginRight="20px"
+            android:layout_marginRight="30px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
@@ -191,18 +182,28 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="30px"
+        android:layout_height="20px"
         android:layout_below="@+id/relativeLayout1"
         android:layout_alignParentStart="true"/>
 
     <ImageView
         android:id="@+id/iv_login_icon"
         android:src="@drawable/login_icon"
-        android:layout_width="250px"
-        android:layout_height="250px"
-        android:layout_marginTop="45dp"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_marginTop="60px"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
+
+    <View
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:id="@+id/line2"
+        android:background="#c7c7ca"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/view3"
+        />
 
 </RelativeLayout>
 

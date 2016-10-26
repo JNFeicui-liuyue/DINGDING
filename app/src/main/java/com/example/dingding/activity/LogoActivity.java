@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.example.dingding.R;
 import com.example.dingding.ben.commons.ActivityUtils;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -15,7 +16,7 @@ import butterknife.ButterKnife;
 /**
  * Logo界面
  */
-public class LogoActivity extends AppCompatActivity {
+public class LogoActivity extends AutoLayoutActivity {
 
     private ActivityUtils mActivityUtils;
 

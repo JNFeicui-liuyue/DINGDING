@@ -17,7 +17,7 @@
         android:id="@+id/view1"
         android:layout_below="@+id/actionbar_set_logincode"
         android:layout_width="match_parent"
-        android:layout_height="160px"/>
+        android:layout_height="100px"/>
 
     <TextView
         android:id="@+id/tv_word"
@@ -31,7 +31,7 @@
         android:id="@+id/view2"
         android:layout_below="@+id/tv_word"
         android:layout_width="match_parent"
-        android:layout_height="50px"/>
+        android:layout_height="40px"/>
 
     <RelativeLayout
 
@@ -75,10 +75,10 @@
         android:id="@+id/view5"
         android:layout_below="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="40px"/>
+        android:layout_height="30px"/>
 
     <View
-        android:layout_marginLeft="10px"
+        android:layout_marginLeft="20px"
         android:id="@+id/line1"
         android:background="#686869"
         android:layout_below="@+id/view5"
@@ -93,7 +93,7 @@
 
     <Button
         android:text="进入钉钉"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:id="@+id/register_btn"
         android:layout_below="@+id/view3"

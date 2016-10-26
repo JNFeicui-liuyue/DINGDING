@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.example.dingding.R;
 import com.example.dingding.adapter.SplashAdapter;
 import com.example.dingding.ben.commons.ActivityUtils;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * 引导界面
  */
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends AutoLayoutActivity {
 
     @Bind(R.id.viewpager)ViewPager mViewPager;
 

@@ -14,12 +14,13 @@ import com.example.dingding.R;
 import com.example.dingding.ServiceAgreementClickableSpan;
 import com.example.dingding.ben.commons.ActivityUtils;
 import com.example.dingding.ben.utils.HMActionBar;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AutoLayoutActivity {
 
     private ActivityUtils mActivityUtils;
 

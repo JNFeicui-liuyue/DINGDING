@@ -14,22 +14,22 @@
         android:orientation="horizontal"
         android:background="#99eeeeee"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="100px">
 
 
         <ImageView
             android:layout_centerVertical="true"
             android:src="@drawable/login_slide_source_icon"
             android:layout_marginLeft="20px"
-            android:layout_width="90px"
-            android:layout_height="90px"
+            android:layout_width="60px"
+            android:layout_height="60px"
             android:id="@+id/imageView"/>
 
         <TextView
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/imageView"
             android:text="钉钉"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_gravity="center_vertical"
             android:textColor="@color/titleColorSelected"
             android:layout_marginLeft="20px"
@@ -66,7 +66,7 @@
     </RelativeLayout>
 
     <View
-        android:background="#686869"
+        android:background="#d5d5d9"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
 
