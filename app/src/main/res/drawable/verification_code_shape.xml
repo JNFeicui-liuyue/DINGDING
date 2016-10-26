@@ -1,0 +1,15 @@
+<shape  xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <!-- 实心 -->
+    <solid android:color="#f2f0ee"/>
+
+    <!-- 描边 -->
+    <stroke
+        android:tint="#38ADFF"
+        android:width="2dp"
+        android:color="#d9d5d5" />
+    <!-- 圆角 -->
+    <corners
+        android:radius="5dp" />
+</shape>

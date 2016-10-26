@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set_login_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.dingding.activity.SetLoginCodeActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_set_logincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/actionbar_set_logincode"
+        android:layout_width="match_parent"
+        android:layout_height="160px"/>
+
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_below="@+id/view1"
+        android:layout_marginLeft="30px"
+        android:text="密码可用于登录钉钉手机版和电脑版"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/tv_word"
+        android:layout_width="match_parent"
+        android:layout_height="50px"/>
+
+    <RelativeLayout
+
+        android:id="@+id/relativeLayout1"
+        android:layout_below="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+        <TextView
+            android:text="登录密码"
+            android:textSize="18sp"
+            android:textColor="#313131"
+            android:id="@+id/tv_login_password"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:background="#ffffff"
+            android:hint="请输入6-20位密码"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_login_password"
+            android:id="@+id/editText"/>
+
+        <ImageView
+            android:src="@mipmap/eyes_blue"
+            android:id="@+id/iv_register_country"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10px"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40px"/>
+
+    <View
+        android:layout_marginLeft="10px"
+        android:id="@+id/line1"
+        android:background="#686869"
+        android:layout_below="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:layout_below="@+id/line1"
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="40px"/>
+
+    <Button
+        android:text="进入钉钉"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:id="@+id/register_btn"
+        android:layout_below="@+id/view3"
+        android:background="@drawable/enterdingding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

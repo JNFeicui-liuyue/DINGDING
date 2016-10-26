@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/popup_shape"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:background="#000000"-->
+        <!--android:id="@+id/view"/>-->
+
+    <TextView
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="40px"
+        android:layout_marginBottom="20px"
+        android:text="账号挂失"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:id="@+id/tv_lost"
+        android:typeface="monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c2bebe"/>
+
+    <TextView
+        android:layout_marginLeft="20px"
+        android:text="取消"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:id="@+id/tv_cancel"
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:background="#000000"/>-->
+
+
+
+</LinearLayout>

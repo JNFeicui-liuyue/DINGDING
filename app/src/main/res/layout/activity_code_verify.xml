@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_code_verify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.dingding.activity.CodeVerifyActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_codeverify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/actionbar_codeverify"
+        android:layout_width="match_parent"
+        android:layout_height="130px"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/view1"
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:text="验证码已发送至手机:"
+        android:textSize="15sp"
+        android:layout_marginLeft="80px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="+86"
+            android:id="@+id/tv_country"
+            android:layout_marginLeft="18px"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="139-5478-9655"
+            android:id="@+id/tv_phone"
+            android:layout_marginLeft="20px"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60px"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:gravity="center"
+            android:id="@+id/ed_number1"
+            android:layout_marginLeft="90px"
+            android:background="@drawable/verification_code_shape"
+            android:layout_width="170px"
+            android:layout_height="170px"/>
+
+        <EditText
+            android:gravity="center"
+            android:id="@+id/ed_number2"
+            android:layout_marginLeft="50px"
+            android:layout_toRightOf="@+id/ed_number1"
+            android:background="@drawable/verification_code_shape"
+            android:layout_width="170px"
+            android:layout_height="170px"/>
+
+        <EditText
+            android:gravity="center"
+            android:id="@+id/ed_number3"
+            android:layout_marginLeft="50px"
+            android:layout_toRightOf="@+id/ed_number2"
+            android:background="@drawable/verification_code_shape"
+            android:layout_width="170px"
+            android:layout_height="170px"/>
+
+        <EditText
+            android:gravity="center"
+            android:id="@+id/ed_number4"
+            android:layout_marginLeft="50px"
+            android:layout_toRightOf="@+id/ed_number3"
+            android:background="@drawable/verification_code_shape"
+            android:layout_width="170px"
+            android:layout_height="170px"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/relativeLayout2"
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="35px"/>
+
+    <Button
+        android:text="下一步"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:id="@+id/register_btn"
+        android:layout_below="@+id/view3"
+        android:background="@drawable/enterdingding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:layout_below="@+id/register_btn"
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="28px"/>
+</RelativeLayout>
