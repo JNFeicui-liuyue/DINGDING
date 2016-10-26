@@ -1,5 +1,9 @@
 package com.example.dingding.activity;
 
+import android.graphics.Color;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,6 +22,9 @@ import com.example.dingding.fragment.LinkmanFragment;
 import com.example.dingding.fragment.MineFragment;
 import com.example.dingding.fragment.WorkFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -26,38 +33,34 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityUtils activityUtils; // Activity常用工具集
-
-    @Bind(R.id.fth_tabhost)FragmentTabHost fth_tabhost;
-    @Bind(R.id.realtabcontent)FrameLayout mFrameLayout;
+    private List<Fragment> mFragmentList;
+    private Class mClass[] = {InfoFragment.class,
+            DINGFragment.class, WorkFragment.class ,
+            LinkmanFragment.class, MineFragment.class};
 
     /**
      * Fragment数组界面
      */
-    private Class mFragmentArray [] = {InfoFragment.class, DINGFragment.class, WorkFragment.class ,
-            LinkmanFragment.class, MineFragment.class};
-
-    /**
-     * 布局填充器
-     */
-    private LayoutInflater mLayoutInflater;
-
-    /**
-     *存放图片数组
-     */
-    private int mImageArray [] = {R.drawable.tab_message, R.drawable.tab_ding, R.drawable.tab_work,
-            R.drawable.tab_linkman, R.drawable.tab_mine};
+    private Fragment mFragment[] = {new InfoFragment(),new DINGFragment(),
+            new WorkFragment(), new LinkmanFragment(),new MineFragment()};
 
     /**
      * 选项卡文字
      */
-    private String mTextArray[] = {"消息", "DING", "工作", "联系人", "我的"};
+    private String mTitles[] = {"消息", "DING", "工作", "联系人", "我的"};
 
+    /**
+     *存放图片数组
+     */
+    private int mImageArray [] = {R.drawable.tab_message, R.drawable.tab_ding,
+            R.drawable.tab_work, R.drawable.tab_linkman, R.drawable.tab_mine};
+
+    private android.support.v4.app.FragmentTabHost mTabhost;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityUtils = new ActivityUtils(this);
         setContentView(R.layout.activity_main);
     }
 
@@ -66,31 +69,86 @@ public class MainActivity extends AppCompatActivity {
         super.onContentChanged();
         ButterKnife.bind(this);
 
-        initDate();
+        initView();
+        initEvent();
+
     }
 
-    private void initDate() {
+    /**
+     * 初始化视图控件
+     */
+    private void initView() {
+        mTabhost = (android.support.v4.app.FragmentTabHost) findViewById(android.R.id.tabhost);
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
-        mLayoutInflater = LayoutInflater.from(this);
-        fth_tabhost.setup(this,getSupportFragmentManager(),R.id.realtabcontent);
-        final int count = mFragmentArray.length;
-        for (int i = 0; i < count; i++) {
-            TabHost.TabSpec tabSpec = fth_tabhost.newTabSpec(mTextArray[i]).setIndicator(
-                    getTabItemView(i));
-            fth_tabhost.addTab(tabSpec,mFragmentArray[i],null);
-            fth_tabhost.getTabWidget().setDividerDrawable(R.color.white);
+        mFragmentList = new ArrayList<>();
+
+        mTabhost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
+        mTabhost.getTabWidget().setDividerDrawable(null);
+
+        for (int i = 0; i < mFragment.length; i++) {
+            TabHost.TabSpec tabSpec = mTabhost.newTabSpec(mTitles[i]).setIndicator(getTabView(i));
+            mTabhost.addTab(tabSpec,mClass[i],null);
+            mFragmentList.add(mFragment[i]);
+            mTabhost.getTabWidget().getChildAt(i).setBackgroundColor(Color.WHITE);
         }
+
+        mViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                return mFragmentList.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return mFragmentList.size();
+            }
+        });
+    }
+
+    /**
+     * 为Tabhost跟ViewPager设置监听
+     */
+    private void initEvent(){
+
+        mTabhost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                mViewPager.setCurrentItem(mTabhost.getCurrentTab());
+            }
+        });
+
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                mTabhost.setCurrentTab(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     /**
      * 给每个Tab按钮设置图标和文字
      */
-    private View getTabItemView(int index){
-        View view = mLayoutInflater.inflate(R.layout.tab_item,null);
+    private View getTabView(int index){
+        View view = LayoutInflater.from(this).inflate(R.layout.tab_item, null);
+
         ImageView image = (ImageView) view.findViewById(R.id.image);
         image.setImageResource(mImageArray[index]);
+
         TextView title = (TextView) view.findViewById(R.id.title);
-        title.setText(mTextArray[index]);
+        title.setText(mTitles[index]);
+
         return view;
 
     }
