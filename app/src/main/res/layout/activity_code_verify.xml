@@ -15,118 +15,140 @@
 
     <View
         android:id="@+id/view1"
-        android:layout_below="@+id/actionbar_codeverify"
         android:layout_width="match_parent"
-        android:layout_height="100px"/>
+        android:layout_height="100px"
+        android:layout_below="@+id/actionbar_codeverify"/>
 
     <RelativeLayout
-        android:layout_below="@+id/view1"
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/tv_code"
-        android:text="验证码已发送至手机:"
-        android:textSize="15sp"
-        android:layout_marginLeft="80px"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1">
 
         <TextView
-            android:text="139-5478-9655"
-            android:id="@+id/tv_phone"
-            android:layout_marginLeft="10px"
-            android:textSize="15sp"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/tv_country"
+            android:id="@+id/tv_code"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="验证码已发送至手机:"
+            android:textSize="15sp"/>
 
         <TextView
-            android:text="+86"
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@+id/tv_country"
+            android:text="139-5478-9655"
+            android:textSize="15sp"/>
+
+        <TextView
             android:id="@+id/tv_country"
-            android:layout_marginLeft="20px"
-            android:textSize="15sp"
-            android:layout_toRightOf="@+id/tv_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_code"
+            android:text="+86"
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 
     <View
         android:id="@+id/view2"
-        android:layout_below="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="40px"/>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_below="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:gravity="center"
-            android:id="@+id/ed_number1"
-            android:layout_marginLeft="100px"
-            android:background="@drawable/verification_code_shape"
-            android:layout_width="100px"
-            android:layout_height="100px"/>
-
-        <EditText
-            android:gravity="center"
-            android:id="@+id/ed_number2"
-            android:layout_marginLeft="25px"
-            android:layout_toRightOf="@+id/ed_number1"
-            android:background="@drawable/verification_code_shape"
-            android:layout_width="100px"
-            android:layout_height="100px"/>
-
-        <EditText
-            android:gravity="center"
-            android:id="@+id/ed_number3"
-            android:layout_marginLeft="25px"
-            android:layout_toRightOf="@+id/ed_number2"
-            android:background="@drawable/verification_code_shape"
-            android:layout_width="100px"
-            android:layout_height="100px"/>
-
-        <EditText
-            android:gravity="center"
-            android:id="@+id/ed_number4"
-            android:layout_marginLeft="25px"
-            android:layout_toRightOf="@+id/ed_number3"
-            android:background="@drawable/verification_code_shape"
-            android:layout_width="100px"
-            android:layout_height="100px"/>
-
-    </RelativeLayout>
+        android:layout_height="40px"
+        android:layout_below="@+id/relativeLayout1"/>
 
     <View
-        android:layout_below="@+id/relativeLayout2"
         android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_height="40px"/>
+        android:layout_height="40px"
+        android:layout_below="@+id/relativeLayout2"/>
 
     <Button
-        android:text="下一步"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
         android:id="@+id/register_btn"
-        android:layout_below="@+id/view3"
-        android:background="@drawable/enterdingding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="20px"
         android:layout_marginRight="20px"
-        android:layout_centerHorizontal="true"/>
+        android:background="@drawable/enterdingding"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
 
     <View
-        android:layout_below="@+id/register_btn"
         android:id="@+id/view4"
         android:layout_width="match_parent"
-        android:layout_height="28px"/>
+        android:layout_height="28px"
+        android:layout_below="@+id/register_btn"/>
+
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentStart="true">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:background="@drawable/verification_code_shape"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <EditText
+                android:textSize="30sp"
+                android:id="@+id/ed_number1"
+                android:maxLength="1"
+                android:cursorVisible="false"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:inputType="number"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center"/>
+        <!--</LinearLayout>-->
+
+        <EditText
+            android:textSize="30sp"
+            android:focusable="true"
+            android:gravity="center"
+            android:maxLength="1"
+            android:id="@+id/ed_number2"
+            android:cursorVisible="false"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="25px"
+            android:layout_toRightOf="@+id/ed_number1"
+            android:background="@drawable/bg_edittext"
+            />
+
+        <EditText
+            android:textSize="30sp"
+            android:maxLength="1"
+            android:cursorVisible="false"
+            android:id="@+id/ed_number3"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="25px"
+            android:layout_toRightOf="@+id/ed_number2"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center"/>
+
+        <EditText
+            android:textSize="30sp"
+            android:maxLength="1"
+            android:cursorVisible="false"
+            android:id="@+id/ed_number4"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="25px"
+            android:layout_toRightOf="@+id/ed_number3"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center"/>
+
+    </LinearLayout>
 </RelativeLayout>

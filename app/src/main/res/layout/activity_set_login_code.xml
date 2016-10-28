@@ -63,6 +63,8 @@
 
         <ImageView
             android:src="@mipmap/eyes_blue"
+            android:tint="#86CDFD"
+android:adjustViewBounds="true"
             android:id="@+id/iv_register_country"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

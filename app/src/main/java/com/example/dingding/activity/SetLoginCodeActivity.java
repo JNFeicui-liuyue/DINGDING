@@ -12,7 +12,7 @@ import com.zhy.autolayout.AutoLayoutActivity;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class SetLoginCodeActivity extends AutoLayoutActivity {
+public class           SetLoginCodeActivity extends AutoLayoutActivity {
 
     private ActivityUtils mActivityUtils;
     @Bind(R.id.actionbar_set_logincode)HMActionBar mHMActionBar;

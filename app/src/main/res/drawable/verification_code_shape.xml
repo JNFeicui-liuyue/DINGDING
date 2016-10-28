@@ -6,7 +6,6 @@
 
     <!-- 描边 -->
     <stroke
-        android:tint="#38ADFF"
         android:width="2dp"
         android:color="#d4d2d2" />
     <!-- 圆角 -->
