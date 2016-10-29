@@ -45,6 +45,7 @@ public class CodeVerifyActivity extends AutoLayoutActivity {
 
         mActivityUtils = new ActivityUtils(this);
 
+        //为四个验证码输入框设置自动向下跳转
         mEtNumber1.addTextChangedListener(watcher1);
         mEtNumber2.addTextChangedListener(watcher2);
         mEtNumber3.addTextChangedListener(watcher3);
@@ -62,7 +63,6 @@ public class CodeVerifyActivity extends AutoLayoutActivity {
 
         setActionBar();
 
-        setEditTextAnimation();
     }
 
     /**
@@ -166,38 +166,9 @@ public class CodeVerifyActivity extends AutoLayoutActivity {
         }
     };
 
-
     /**
      * 设置验证码输入框的动画效果
      */
-    public void setEditTextAnimation() {
-
-//        final AlphaAnimation alphaAnimation1 = new AlphaAnimation(0.1f, 1.0f);
-//        alphaAnimation1.setDuration(500);
-//        alphaAnimation1.setRepeatCount(Animation.INFINITE);
-//        alphaAnimation1.setRepeatMode(Animation.REVERSE);
-//        mEtNumber1.setAnimation(alphaAnimation1);
-//        alphaAnimation1.start();
-
-//        if (mEtNumber1 != null && mEtNumber1.getText().length() == 1){
-//            mEtNumber1.clearFocus();
-//            mEtNumber2.requestFocus();
-//        }
-
-//        for (int i = 0; i < editText.length; i++) {
-//            if (editText[i] != null && editText[i].getText().length() == 1){
-//                editText[i].clearFocus();
-//                editText[i + 1].requestFocusFromTouch();
-//                return;
-//            }
-//        }
-
-
-
-
-    }
-
-    //定时器，闪烁效果！
     Handler handler1 = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == 1) {

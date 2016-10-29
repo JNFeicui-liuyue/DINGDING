@@ -13,6 +13,12 @@
     <color name="card_shadow">#10000000</color>
     <color name="light_blue">#6BC1FF</color>
     <color name="light_blue1">#86CDFD</color>
+    <color name="bg_color">#F4F3F3</color>
+    <color name="country_line">#EFEFF4</color>
+    <color name="actionbar">#F7F7F7</color>
+    <color name="actionbar_line">#DBDBDB</color>
+    <color name="canvas">#FF706F6F</color>
+    <color name="word">#ADADAD</color>
 
 
 

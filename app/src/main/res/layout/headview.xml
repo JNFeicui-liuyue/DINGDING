@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+
+    <TextView
+    android:layout_marginLeft="20px"
+    android:text="热门国家和地区"
+    android:textSize="25sp"
+    android:gravity="center_vertical"
+    android:paddingBottom="2dip"
+    android:paddingLeft="8dip"
+    android:paddingTop="2dip"
+    android:textColor="#ADADAD"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+
+    <View
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="50px"
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="10px"/>
+
+    <ListView
+    android:divider="#00000000"
+    android:dividerHeight="0dip"
+    android:id="@+id/country_lv_listhot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:cacheColorHint="#000000"
+    android:fadingEdge="none"
+    android:scrollbars="none"
+    android:scrollingCache="false"
+    />
+
+</LinearLayout>

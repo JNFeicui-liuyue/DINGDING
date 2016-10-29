@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="140px"
-    android:background="#f4f1f1"
-    >
+    android:background="@color/actionbar">
     <View
         android:id="@+id/line"
         android:layout_width="12dp"
@@ -28,8 +27,8 @@
         android:layout_toRightOf="@id/iv_back"
         android:text="Title"
         android:textColor="#3b3b3d"
-        android:textSize="18sp"
-        android:visibility="gone"
+        android:textSize="25sp"
+        android:visibility="invisible"
         android:layout_marginLeft="20px"
         />
 
@@ -108,7 +107,7 @@
 
     <View
         android:id="@+id/line1"
-        android:background="#d5d5d9"
+        android:background="#b3b0b0"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="1px"/>

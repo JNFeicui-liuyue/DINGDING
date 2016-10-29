@@ -1,6 +1,7 @@
 package com.example.dingding.activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 
 import com.example.dingding.R;
@@ -27,6 +29,7 @@ public class LoginActivity extends AutoLayoutActivity {
     private PopupWindow mPopupWindow;
     private ProgressDialog mProgressDialog;
 
+    @Bind(R.id.tv_word)TextView mTvCountry;
     @Bind(R.id.login_edt_username)EditText telephone_login;
     @Bind(R.id.login_edt_pwd)EditText password_login;
 
@@ -41,6 +44,34 @@ public class LoginActivity extends AutoLayoutActivity {
     public void onContentChanged() {
         super.onContentChanged();
         ButterKnife.bind(this);
+    }
+
+    /**
+     * 选择国家地区代码
+     */
+    @OnClick({R.id.tv_word,R.id.iv_login_country})
+    public void selectCountryNumber(){
+        Intent intent = new Intent();
+        intent.setClass(LoginActivity.this, CountryActivity.class);
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode){
+            case 12:
+                if (resultCode == RESULT_OK){
+                    Bundle bundle = data.getExtras();
+                    String countryNumber = bundle.getString("countryNumber");
+                    mTvCountry.setText(countryNumber);
+
+                }
+                break;
+
+            default:
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     /**
