@@ -1,11 +1,13 @@
 package com.example.dingding.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,6 +28,9 @@ public class RegisterActivity extends AutoLayoutActivity {
 
     @Bind(R.id.actionbar_register)HMActionBar mHMActionBar;
     @Bind(R.id.tv_tiaokuan)TextView mPolicy;
+    @Bind(R.id.tv_city_number)TextView mTvCityNumber;
+    @Bind(R.id.tv_city)TextView mTvCity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,35 @@ public class RegisterActivity extends AutoLayoutActivity {
 
         initPolicy();
 
+    }
+
+    /**
+     * 选择国家地区代码
+     */
+    @OnClick({R.id.iv_register_country})
+    public void selectCountry(){
+        Intent intent = new Intent();
+        intent.setClass(RegisterActivity.this, CountryActivity.class);
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode){
+            case 12:
+                if (resultCode == RESULT_OK){
+                    Bundle bundle = data.getExtras();
+                    String countryNumber = bundle.getString("countryNumber");
+                    String countryName = bundle.getString("countryName");
+                    mTvCityNumber.setText(countryNumber);
+                    mTvCity.setText(countryName);
+                }
+                break;
+
+            default:
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     /**
@@ -92,5 +126,21 @@ public class RegisterActivity extends AutoLayoutActivity {
             }
         });
 
+    }
+
+    /**
+     * 物理回退
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                mActivityUtils.startActivity(LoginActivity.class);
+                finish();
+                return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

@@ -50,14 +50,29 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"/>
 
+
+
             <android.support.v4.view.ViewPager
                 android:id="@+id/view_pager"
                 android:layout_weight="1"
+                android:background="#99eeeeee"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"/>
 
+            <View
+                android:id="@+id/line1"
+                android:background="#d5d5d9"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="5px"/>
+
             <TabWidget
                 android:id="@android:id/tabs"
+                android:background="#99eeeeee"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"/>
 

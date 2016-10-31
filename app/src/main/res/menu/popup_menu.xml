@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/scan"
+		android:icon="@mipmap/tab_ding_icon1"
+		android:title="扫一扫" />
+	<item
+		android:id="@+id/chat"
+		android:icon="@android:drawable/ic_menu_add"
+		android:title="发起群聊" />
+	<item
+		android:id="@+id/add"
+		android:icon="@android:drawable/ic_menu_edit"
+		android:title="添加好友">
+	</item>
+	<item
+		android:id="@+id/dingpan"
+		android:title="钉盘" />
+	<item
+		android:id="@+id/dingyou"
+		android:icon="@android:drawable/ic_menu_edit"
+		android:title="钉邮">
+	</item>
+</menu>

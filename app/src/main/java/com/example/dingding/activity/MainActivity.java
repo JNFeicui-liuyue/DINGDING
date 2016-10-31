@@ -4,20 +4,16 @@ import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.example.dingding.R;
-import com.example.dingding.ben.commons.ActivityUtils;
-import com.example.dingding.ben.view.fragmentTabHost.FragmentTabHost;
 import com.example.dingding.fragment.DINGFragment;
-import com.example.dingding.fragment.InfoFragment;
+import com.example.dingding.fragment.MessageFragment;
 import com.example.dingding.fragment.LinkmanFragment;
 import com.example.dingding.fragment.MineFragment;
 import com.example.dingding.fragment.WorkFragment;
@@ -26,7 +22,6 @@ import com.zhy.autolayout.AutoLayoutActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -35,14 +30,14 @@ import butterknife.ButterKnife;
 public class MainActivity extends AutoLayoutActivity {
 
     private List<Fragment> mFragmentList;
-    private Class mClass[] = {InfoFragment.class,
+    private Class mClass[] = {MessageFragment.class,
             DINGFragment.class, WorkFragment.class ,
             LinkmanFragment.class, MineFragment.class};
 
     /**
      * Fragment数组界面
      */
-    private Fragment mFragment[] = {new InfoFragment(),new DINGFragment(),
+    private Fragment mFragment[] = {new MessageFragment(),new DINGFragment(),
             new WorkFragment(), new LinkmanFragment(),new MineFragment()};
 
     /**

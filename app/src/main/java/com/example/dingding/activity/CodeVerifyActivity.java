@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -202,5 +203,21 @@ public class CodeVerifyActivity extends AutoLayoutActivity {
             handler1.sendMessage(message);
         }
     };
+
+    /**
+     * 物理回退
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                mActivityUtils.startActivity(RegisterActivity.class);
+                finish();
+                return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }

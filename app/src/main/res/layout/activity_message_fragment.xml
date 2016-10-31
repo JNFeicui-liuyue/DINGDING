@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_info_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.example.dingding.fragment.MessageFragment">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <!--<RelativeLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="#99eeeeee"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100px">-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/login_slide_source_icon"-->
+            <!--android:layout_marginLeft="20px"-->
+            <!--android:layout_width="60px"-->
+            <!--android:layout_height="60px"-->
+            <!--android:id="@+id/imageView"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/imageView"-->
+            <!--android:text="钉钉"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:textColor="@color/titleColorSelected"-->
+            <!--android:layout_marginLeft="20px"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_toLeftOf="@+id/iv_call"-->
+            <!--android:id="@+id/iv_search"-->
+            <!--android:src="@drawable/cspace_files_search"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_toLeftOf="@+id/iv_more"-->
+            <!--android:id="@+id/iv_call"-->
+            <!--android:layout_marginLeft="60px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/cmail_call"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_marginLeft="60px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:id="@+id/iv_more"-->
+            <!--android:layout_marginRight="30px"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@drawable/dentry_icon_more_update"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+    <!--</RelativeLayout>-->
+
+    <View
+        android:background="#d5d5d9"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

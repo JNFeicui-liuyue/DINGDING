@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="140px"
-    android:background="@color/actionbar">
+    android:background="#99eeeeee">
     <View
         android:id="@+id/line"
         android:layout_width="12dp"
@@ -19,6 +19,28 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"/>
 
+    <ImageView
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:src="@drawable/login_slide_source_icon"
+        android:layout_marginLeft="20px"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:id="@+id/imageView"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:text="钉钉"
+        android:textSize="20sp"
+        android:id="@+id/title"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/titleColorSelected"
+        android:layout_marginLeft="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/actionbar_left_text"
         android:layout_width="wrap_content"
@@ -27,7 +49,7 @@
         android:layout_toRightOf="@id/iv_back"
         android:text="Title"
         android:textColor="#3b3b3d"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:visibility="invisible"
         android:layout_marginLeft="20px"
         />
@@ -107,9 +129,30 @@
 
     <View
         android:id="@+id/line1"
-        android:background="#b3b0b0"
+        android:background="#d5d5d9"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
+
+    <ImageView
+        android:layout_toLeftOf="@+id/iv_more"
+        android:id="@+id/iv_search"
+        android:layout_marginLeft="60px"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cspace_files_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_marginLeft="60px"
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_more"
+        android:layout_marginRight="30px"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dentry_icon_more_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 </RelativeLayout>

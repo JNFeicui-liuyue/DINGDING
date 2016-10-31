@@ -2,6 +2,7 @@ package com.example.dingding.ben.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.provider.ContactsContract;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +24,14 @@ public class HMActionBar extends RelativeLayout {
     private View mRootView;
 
     private TextView mLeftTextView;
+    private TextView mTvTitle;
     private ImageView mLeftImageView;
     private ImageView mRightViewImage;
     private ImageView mRightViewImage2;
     private ImageView mImageViewBack;
+    private ImageView mIvIcon;
+    private ImageView mIvSearch;
+    private ImageView mIvMore;
     private Button mRightViewBtn;
 
     private TextView mTitleView;
@@ -56,12 +61,16 @@ public class HMActionBar extends RelativeLayout {
 
     private void findViews() {
         mLeftTextView = (TextView) mRootView.findViewById(R.id.actionbar_left_text);
+        mTvTitle = (TextView) mRootView.findViewById(R.id.title);
         mLeftImageView = (ImageView) mRootView.findViewById(R.id.actionbar_left_image);
         mTitleView = (TextView) mRootView.findViewById(R.id.actionbar_title);
         mRightView = (TextView) mRootView.findViewById(R.id.actionbar_right);
         mRightViewImage = (ImageView) mRootView.findViewById(R.id.actionbar_right_image);
         mRightViewImage2 = (ImageView) mRootView.findViewById(R.id.actionbar_right_image2);
         mImageViewBack = (ImageView) mRootView.findViewById(R.id.iv_back);
+        mIvIcon = (ImageView) mRootView.findViewById(R.id.imageView);
+        mIvSearch = (ImageView) mRootView.findViewById(R.id.iv_search);
+        mIvMore = (ImageView) mRootView.findViewById(R.id.iv_more);
         mRightViewBtn = (Button) mRootView.findViewById(R.id.actionbar_right_btn);
         setListeners();
     }
@@ -83,7 +92,43 @@ public class HMActionBar extends RelativeLayout {
 
     }
 
+    public void setIvIcon(){
+        if (mIvIcon != null){
+//            mIvIcon.setImageResource(resId);
+            mIvIcon.setVisibility(VISIBLE);
+        }
+
+    }
+
+    public void setIvSearch(){
+        if (mIvSearch != null){
+//            mIvSearch.setImageResource(resId);
+            mIvSearch.setVisibility(VISIBLE);
+        }
+
+    }
+
+    public void setIvMore(){
+        if (mIvMore != null){
+//            mIvMore.setImageResource(resId);
+            mIvMore.setVisibility(VISIBLE);
+        }
+
+    }
+
     public void setBackIconOnClickListener(OnClickListener listener) {
+        if (mImageViewBack != null) {
+            this.mImageViewBack.setOnClickListener(listener);
+        }
+    }
+
+    public void setIvSearchOnClickListener(OnClickListener listener) {
+        if (mImageViewBack != null) {
+            this.mImageViewBack.setOnClickListener(listener);
+        }
+    }
+
+    public void setIvMoreOnClickListener(OnClickListener listener) {
         if (mImageViewBack != null) {
             this.mImageViewBack.setOnClickListener(listener);
         }
@@ -93,6 +138,13 @@ public class HMActionBar extends RelativeLayout {
         if (mLeftTextView != null) {
             mLeftTextView.setText(text);
             mLeftTextView.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void setTvTitle() {
+        if (mTvTitle != null) {
+//            mTvTitle.setText(text);
+            mTvTitle.setVisibility(View.VISIBLE);
         }
     }
 

@@ -2,6 +2,7 @@ package com.example.dingding.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.example.dingding.R;
@@ -47,5 +48,21 @@ public class           SetLoginCodeActivity extends AutoLayoutActivity {
             }
         });
 
+    }
+
+    /**
+     * 物理回退
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                mActivityUtils.startActivity(CodeVerifyActivity.class);
+                finish();
+                return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

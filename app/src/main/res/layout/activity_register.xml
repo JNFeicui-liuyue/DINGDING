@@ -36,8 +36,20 @@
             android:layout_height="match_parent"/>
 
         <TextView
-            android:hint="+86 中国"
+            android:id="@+id/tv_city_number"
+            android:hint="+86"
             android:textSize="18sp"
+            android:layout_marginRight="5px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_city"/>
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:hint="中国"
+            android:textSize="18sp"
+            android:layout_marginLeft="5px"
             android:layout_marginRight="5px"
             android:gravity="center_vertical"
             android:layout_width="wrap_content"

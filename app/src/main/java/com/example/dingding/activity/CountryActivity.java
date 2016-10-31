@@ -31,6 +31,7 @@ import com.example.dingding.ben.Tools.GetCountryNameSort;
 import com.example.dingding.ben.Tools.SideBar;
 import com.example.dingding.ben.commons.ActivityUtils;
 import com.example.dingding.ben.utils.HMActionBar;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,7 +49,7 @@ import java.util.Map;
  *
  * @author duanbokan
  */
-public class CountryActivity extends Activity {
+public class CountryActivity extends AutoLayoutActivity {
 
     String TAG = "CountryActivity";
 
@@ -317,13 +318,16 @@ System.out.println("获取国家列表长度===================="+getResources()
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 String countryNumber = null;
+                String countryName = null;
                 countryNumber = cityNumber[position].toString().trim();
+                countryName = cityName[position].toString().trim();
 
                 Intent intent = new Intent();
                 intent.setClass(CountryActivity.this, LoginActivity.class);
                 intent.putExtra("countryNumber", countryNumber);
+                intent.putExtra("countryNume", countryName);
                 setResult(RESULT_OK, intent);
-                Log.e(TAG,  "countryNumber: " + countryNumber);
+                Log.e(TAG, "countryName: + " + countryName +  "countryNumber: " + countryNumber);
                 finish();
             }
         });
