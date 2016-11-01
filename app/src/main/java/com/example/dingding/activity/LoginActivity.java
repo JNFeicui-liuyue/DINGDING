@@ -3,10 +3,14 @@ package com.example.dingding.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +20,11 @@ import android.widget.TextView;
 
 
 import com.example.dingding.R;
+import com.example.dingding.ben.bean.LoginBean;
+import com.example.dingding.ben.bean.LoginUpBean;
 import com.example.dingding.ben.commons.ActivityUtils;
+import com.example.dingding.connection.LoginConnection;
+import com.google.gson.Gson;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
@@ -28,6 +36,10 @@ public class LoginActivity extends AutoLayoutActivity {
     private ActivityUtils activityUtils; // Activity常用工具集
     private PopupWindow mPopupWindow;
     private ProgressDialog mProgressDialog;
+    private LoginConnection mLoginConnection;
+    private LoginUpBean mLoginUpBean;
+    private Handler mHandler;
+    private static final String TAG = "LoginActivity";
 
     @Bind(R.id.tv_word)TextView mTvCountry;
     @Bind(R.id.login_edt_username)EditText telephone_login;
@@ -38,6 +50,27 @@ public class LoginActivity extends AutoLayoutActivity {
         super.onCreate(savedInstanceState);
         activityUtils = new ActivityUtils(this);
         setContentView(R.layout.activity_login);
+
+        mHandler = new Handler(){
+            public void handleMessage(Message msg){
+                Bundle bundle = msg.getData();
+                String info = bundle.getString("msg");
+                switch (msg.what) {
+                    case 0x1://异常信息
+                        Log.d(TAG, "handleMessage: " + info);
+//                        KL.e(info);
+                        break;
+                    case 0x2://请求成功
+                        Log.d(TAG, "handleMessage: " + info);
+//                        KL.d(info);
+                        break;
+                    case 0x3://请求失败
+                        Log.d(TAG, "handleMessage: " + info);
+//                        KL.d(info);
+                        break;
+                }
+            }
+        };
     }
 
     @Override
@@ -85,10 +118,19 @@ public class LoginActivity extends AutoLayoutActivity {
             activityUtils.showToast("请输入手机号或密码");
         } else {
             mProgressDialog = ProgressDialog.show(this, "", "登陆中,请稍后...");
+
+            mLoginUpBean = new LoginUpBean();
+            mLoginUpBean.setAccount(telephone);
+            mLoginUpBean.setUpwd(password);
+            String gson = new Gson().toJson(mLoginUpBean);
+
+            mLoginConnection = new LoginConnection(gson,mHandler);
+
             activityUtils.startActivity(MainActivity.class);
             finish();
         }
     }
+
 
     /**
      * 新用户注册

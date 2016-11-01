@@ -5,10 +5,11 @@
     android:id="@+id/activity_my_infomation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.dingding.activity.MyInfomationActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_my_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
 
 </RelativeLayout>

@@ -33,6 +33,7 @@ public class HMActionBar extends RelativeLayout {
     private ImageView mIvSearch;
     private ImageView mIvMore;
     private Button mRightViewBtn;
+    private View mView;
 
     private TextView mTitleView;
 
@@ -72,6 +73,7 @@ public class HMActionBar extends RelativeLayout {
         mIvSearch = (ImageView) mRootView.findViewById(R.id.iv_search);
         mIvMore = (ImageView) mRootView.findViewById(R.id.iv_more);
         mRightViewBtn = (Button) mRootView.findViewById(R.id.actionbar_right_btn);
+        mView = mRootView.findViewById(R.id.actionbar_line);
         setListeners();
     }
 
@@ -90,6 +92,12 @@ public class HMActionBar extends RelativeLayout {
             mImageViewBack.setVisibility(VISIBLE);
         }
 
+    }
+
+    public void setViewOccur(){
+        if (mView != null){
+            mView.setVisibility(VISIBLE);
+        }
     }
 
     public void setIvIcon(){

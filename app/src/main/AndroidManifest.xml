@@ -67,6 +67,18 @@
         </activity>
         <activity android:name=".activity.MyInfomationActivity">
         </activity>
+        <activity android:name=".activity.AccountAndSecurityActivity">
+        </activity>
+        <activity android:name=".activity.NewInformationActivity">
+        </activity>
+        <activity android:name=".activity.NoDistrubActivity">
+        </activity>
+        <activity android:name=".activity.PrivacyActivity">
+        </activity>
+        <activity android:name=".activity.UniversalActivity">
+        </activity>
+        <activity android:name=".activity.AboutDingdingActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -72,7 +72,7 @@ public class MineFragment extends Fragment {
     /**
      * 我的资料界面
      */
-    @OnClick(R.id.iv_mine_more)
+    @OnClick({R.id.rl_mine_more,R.id.iv_mine_more})
     public void myInfomation(){
         activityUtils.startActivity(MyInfomationActivity.class);
     }
@@ -81,7 +81,7 @@ public class MineFragment extends Fragment {
     /**
      * 我的红包界面
      */
-    @OnClick(R.id.iv_mine_myhongbao)
+    @OnClick({R.id.rl_mine_myhongbao,R.id.iv_mine_myhongbao})
     public void myRedPacket(){
         activityUtils.startActivity(MyRedPacketActivity.class);
     }
@@ -89,7 +89,7 @@ public class MineFragment extends Fragment {
     /**
      * 我的收藏界面
      */
-    @OnClick(R.id.iv_mine_myshoucang)
+    @OnClick({R.id.rl_mine_myshoucang,R.id.iv_mine_myshoucang})
     public void myCollection(){
         activityUtils.startActivity(MyCollectionActivity.class);
     }
@@ -97,7 +97,7 @@ public class MineFragment extends Fragment {
     /**
      * 邀请界面
      */
-    @OnClick(R.id.iv_mine_invitation)
+    @OnClick({R.id.rl_mine_yaoqing,R.id.iv_mine_invitation})
     public void invitation(){
         activityUtils.startActivity(InvitationActivity.class);
     }
@@ -105,7 +105,7 @@ public class MineFragment extends Fragment {
     /**
      * 设置界面
      */
-    @OnClick(R.id.iv_mine_setting)
+    @OnClick({R.id.rl_mine_shezhi,R.id.iv_mine_setting})
     public void setting(){
         activityUtils.startActivity(SettingActivity.class);
     }

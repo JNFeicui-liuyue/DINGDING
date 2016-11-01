@@ -29,13 +29,24 @@ public class ActivityUtils {
         fragmentWeakReference = new WeakReference<>(fragment);
     }
 
-    private @Nullable
+    private   @Nullable
     Activity getActivity() {
 
         if (activityWeakReference != null) return activityWeakReference.get();
         if (fragmentWeakReference != null) {
             Fragment fragment = fragmentWeakReference.get();
             return fragment == null? null : fragment.getActivity();
+        }
+        return null;
+    }
+
+    private   @Nullable
+    Fragment getFragment() {
+
+//        if (activityWeakReference != null) return activityWeakReference.get();
+        if (fragmentWeakReference != null) {
+            Fragment fragment = fragmentWeakReference.get();
+            return fragment == null? null : fragment;
         }
         return null;
     }
@@ -62,6 +73,13 @@ public class ActivityUtils {
         if (activity == null) return;
         Intent intent = new Intent(activity, clazz);
         activity.startActivity(intent);
+    }
+
+    public void startFragment(Class<? extends Fragment> clazz){
+        Fragment fragment = getFragment();
+        if (fragment == null) return;
+        Intent intent = new Intent(getActivity(), clazz);
+        fragment.startActivity(intent);
     }
 
     /**

@@ -1,14 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_setting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.dingding.activity.SettingActivity">
 
-</RelativeLayout>
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <View
+        android:background="#EEEEF3"
+        android:layout_width="match_parent"
+        android:layout_height="30px"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="账号与安全"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:background="@drawable/clock_background"
+            android:src="@mipmap/cspace_share_no_visible"
+            android:layout_toLeftOf="@+id/tv_protected"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+        <TextView
+            android:text="已保护"
+            android:textSize="20sp"
+            android:textColor="#747373"
+            android:id="@+id/tv_protected"
+            android:layout_toLeftOf="@+id/iv_setting_more"
+            android:layout_marginRight="20px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_more"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:background="#EEEEF3"
+        android:layout_width="match_parent"
+        android:layout_height="50px"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_new_info"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="新消息通知"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_newinfo"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_nodistrub"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="勿扰模式"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_nodietrub"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_sercet"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="隐私"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_sercet"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_universally"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="通用"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_universally"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:background="#EEEEF3"
+        android:layout_width="match_parent"
+        android:layout_height="50px"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_dingding"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="关于钉钉"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="v3.1.0"
+            android:textSize="20sp"
+            android:textColor="#747373"
+            android:layout_toLeftOf="@+id/iv_setting_dingding"
+            android:layout_marginRight="20px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_dingding"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_cell_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:background="#EEEEF3"
+        android:layout_width="match_parent"
+        android:layout_height="50px"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_exit"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:text="退出登录"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#7a7a7b"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <View
+        android:background="#EEEEF3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+</LinearLayout>

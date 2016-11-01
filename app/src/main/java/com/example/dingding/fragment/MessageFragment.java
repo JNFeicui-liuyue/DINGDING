@@ -82,8 +82,9 @@ public class MessageFragment extends Fragment {
      * 顶部标题栏
      */
     private  void setActionBar(){
-        mHMActionBar.setIvIcon();
-        mHMActionBar.setTvTitle();
+//        mHMActionBar.setIvIcon();
+//        mHMActionBar.setTvTitle();
+        mHMActionBar.setBackIcon(R.mipmap.icon_org_invite_qrcode_logo);
         mHMActionBar.setIvSearch();
         mHMActionBar.setIvMore();
 

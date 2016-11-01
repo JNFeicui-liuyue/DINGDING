@@ -30,9 +30,10 @@
         android:layout_height="1px"/>
 
     <RelativeLayout
+        android:id="@+id/rl_mine_more"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="110px">
 
         <ImageView
             android:gravity="center_vertical"
@@ -86,9 +87,10 @@
 
 
     <RelativeLayout
+        android:id="@+id/rl_mine_myhongbao"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="110px">
         
         <ImageView
             android:gravity="center_vertical"
@@ -125,9 +127,10 @@
         android:layout_height="1px"/>
 
     <RelativeLayout
+        android:id="@+id/rl_mine_myshoucang"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="110px">
 
         <ImageView
             android:gravity="center_vertical"
@@ -173,9 +176,10 @@
         android:layout_height="1px"/>
 
     <RelativeLayout
+        android:id="@+id/rl_mine_yaoqing"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="110px">
 
         <ImageView
             android:gravity="center_vertical"
@@ -221,9 +225,10 @@
         android:layout_height="1px"/>
 
     <RelativeLayout
+        android:id="@+id/rl_mine_shezhi"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="110px">
 
         <ImageView
             android:gravity="center_vertical"

@@ -112,8 +112,6 @@ public class RegisterActivity extends AutoLayoutActivity {
 
     /**
      * 顶部标题栏
-     * @author wangzan
-     * @date 2016.06.27.
      */
     private  void setActionBar(){
         mHMActionBar.setLeftText("新用户注册");
