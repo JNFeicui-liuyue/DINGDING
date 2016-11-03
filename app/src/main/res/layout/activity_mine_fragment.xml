@@ -33,7 +33,7 @@
         android:id="@+id/rl_mine_more"
         android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="110px">
+        android:layout_height="120px">
 
         <ImageView
             android:gravity="center_vertical"
@@ -210,7 +210,7 @@
     </RelativeLayout>
 
     <View
-        android:background="#7a7a7b"
+        android:background="#DEDEE0"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
 
@@ -259,7 +259,7 @@
     </RelativeLayout>
 
     <View
-        android:background="#7a7a7b"
+        android:background="#DEDEE0"
         android:layout_width="match_parent"
         android:layout_height="1px"/>
 

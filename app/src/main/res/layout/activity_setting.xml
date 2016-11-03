@@ -39,8 +39,7 @@
             android:layout_height="match_parent"/>
 
         <ImageView
-            android:background="@drawable/clock_background"
-            android:src="@mipmap/cspace_share_no_visible"
+            android:src="@mipmap/icon_device_safe"
             android:layout_toLeftOf="@+id/tv_protected"
             android:layout_centerVertical="true"
             android:layout_marginRight="20px"

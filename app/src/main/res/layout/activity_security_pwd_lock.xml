@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_security_pwd_lock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.example.dingding.activity.SecurityPwdLockActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_security_pwd_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <RelativeLayout
+        android:background="#F3F4F3"
+        android:layout_width="match_parent"
+        android:layout_height="300px">
+
+        <ImageView
+            android:src="@mipmap/lock_pwd_setting_icon"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_protect"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="安全锁密码"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_security_password"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/_uidic_forms_toggle_bg_on"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_unsecurity_password"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/_uidic_forms_toggle_bg_off"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:background="#F3F4F3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="将安全锁密码用于："
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_start_protect"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:text="开启锁屏保护"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_start_protect"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/_uidic_forms_toggle_bg_on"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_unstart_protect"
+            android:layout_marginRight="30px"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/_uidic_forms_toggle_bg_off_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#DEDEE0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:background="#F3F4F3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="当后台运行钉钉超过30秒，程序自动锁定屏幕，打开时需要输入安全锁密码"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#F3F4F3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

@@ -97,10 +97,8 @@ public class LoginActivity extends AutoLayoutActivity {
                     Bundle bundle = data.getExtras();
                     String countryNumber = bundle.getString("countryNumber");
                     mTvCountry.setText(countryNumber);
-
                 }
                 break;
-
             default:
                 break;
         }

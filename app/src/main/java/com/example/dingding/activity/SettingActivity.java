@@ -63,6 +63,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting,R.id.iv_setting_more})
     public void AccountAndSecurity(){
         activityUtils.startActivity(AccountAndSecurityActivity.class);
+        finish();
     }
 
 
@@ -72,6 +73,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting_new_info,R.id.iv_setting_newinfo})
     public void NewInformation(){
         activityUtils.startActivity(NewInformationActivity.class);
+        finish();
     }
 
     /**
@@ -80,6 +82,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting_nodistrub,R.id.iv_setting_nodietrub})
     public void NoDistrub(){
         activityUtils.startActivity(NoDistrubActivity.class);
+        finish();
     }
 
     /**
@@ -88,6 +91,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting_sercet,R.id.iv_setting_sercet})
     public void Privacy(){
         activityUtils.startActivity(PrivacyActivity.class);
+        finish();
     }
 
     /**
@@ -96,6 +100,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting_universally,R.id.iv_setting_universally})
     public void Universal(){
         activityUtils.startActivity(UniversalActivity.class);
+        finish();
     }
 
     /**
@@ -104,6 +109,7 @@ public class SettingActivity extends AutoLayoutActivity {
     @OnClick({R.id.rl_setting_dingding,R.id.iv_setting_dingding})
     public void AboutDingding(){
         activityUtils.startActivity(AboutDingdingActivity.class);
+        finish();
     }
 
     /**
@@ -129,9 +135,11 @@ public class SettingActivity extends AutoLayoutActivity {
             public void onBtnClick() {
                 mDialog.dismiss();
                 activityUtils.startActivity(LoginActivity.class);
+                finish();
             }
         });
         mDialog.content("您确定要退出登录嘛？");
+        mDialog.show();
 
 //        final AlertDialog.Builder builder = new AlertDialog.Builder(this)
 //                .setMessage("您确定要退出登录嘛？")

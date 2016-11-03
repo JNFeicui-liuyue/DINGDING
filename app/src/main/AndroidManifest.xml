@@ -79,6 +79,18 @@
         </activity>
         <activity android:name=".activity.AboutDingdingActivity">
         </activity>
+        <activity android:name=".ben.dialog.HeadPortraitDialog">
+        </activity>
+        <activity android:name=".activity.SelectPhotoActivity">
+        </activity>
+        <activity android:name=".ben.dialog.ModifyNickDialog">
+        </activity>
+        <activity android:name=".activity.AccountProtectActivity">
+        </activity>
+        <activity android:name=".activity.InputNewNumberActivity">
+        </activity>
+        <activity android:name=".activity.SecurityPwdLockActivity">
+        </activity>
     </application>
 
 </manifest>

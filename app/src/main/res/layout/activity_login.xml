@@ -95,6 +95,7 @@
         <com.example.dingding.ben.utils.ClearEditText
             android:background="#ffffff"
             android:id="@+id/login_edt_pwd"
+            android:inputType="numberPassword"
             android:layout_toRightOf="@+id/tv_word1"
             android:gravity="center_vertical"
             android:layout_marginLeft="65px"
