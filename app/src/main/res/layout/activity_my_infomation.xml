@@ -84,6 +84,7 @@
             android:text="vae"
             android:textColor="#000"
             android:textSize="20sp"
+            android:id="@+id/tv_myinfo_nick"
             android:layout_toRightOf="@+id/iv_mine_photo"
             android:layout_below="@+id/tv_nick"
             android:layout_marginLeft="30px"
@@ -203,6 +204,7 @@
             android:text="性别"
             android:textColor="#5b5a5a"
             android:textSize="18sp"
+            android:id="@+id/tv_sex"
             android:gravity="center_vertical"
             android:layout_toRightOf="@+id/iv_mine_photo"
             android:layout_marginLeft="30px"
@@ -233,6 +235,7 @@
         android:layout_height="100px">
 
         <TextView
+            android:id="@+id/tv_birthday"
             android:text="生日"
             android:textColor="#5b5a5a"
             android:textSize="18sp"
@@ -269,6 +272,7 @@
             android:text="地区"
             android:textColor="#5b5a5a"
             android:textSize="18sp"
+            android:id="@+id/tv_region"
             android:gravity="center_vertical"
             android:layout_toRightOf="@+id/iv_mine_photo"
             android:layout_marginLeft="30px"

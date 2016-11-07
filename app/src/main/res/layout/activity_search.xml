@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.example.dingding.activity.SearchActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#99eeeeee">
+
+        <ImageView
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:id="@+id/iv_back"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:layout_marginLeft="10px"
+            android:hint="搜索"
+            android:drawableLeft="@drawable/contcat_crm_search_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="60px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="#998b89"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="20px"
+            android:layout_width="200px"
+            android:layout_height="1px"/>
+
+        <TextView
+            android:text="在这里可以搜索到"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="#998b89"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:layout_width="200px"
+            android:layout_height="1px"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_marginTop="10px"
+        android:id="@+id/grid01"
+        android:horizontalSpacing="1pt"
+        android:verticalSpacing="1pt"
+        android:numColumns="4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></GridView>
+
+</LinearLayout>

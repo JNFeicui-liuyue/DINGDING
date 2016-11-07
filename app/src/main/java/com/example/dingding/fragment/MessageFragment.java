@@ -3,17 +3,25 @@ package com.example.dingding.fragment;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.dingding.R;
+import com.example.dingding.activity.SearchActivity;
 import com.example.dingding.ben.commons.ActivityUtils;
 import com.example.dingding.ben.utils.HMActionBar;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -52,6 +60,14 @@ public class MessageFragment extends Fragment {
     }
 
     /**
+     * 搜索图标的点击事件，跳转至搜索界面
+     */
+    @OnClick(R.id.iv_search)
+    public void search(){
+        activityUtils.startActivity(SearchActivity.class);
+    }
+
+    /**
      * 最右侧 + 按钮的点击事件，使用的是弹出PopupMenu
      * @param view
      */
@@ -62,16 +78,26 @@ public class MessageFragment extends Fragment {
         popup = new PopupMenu(getActivity(), view);
         // 将R.menu.popup_menu菜单资源加载到popup菜单中
         popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
-        // 为popup菜单的菜单项单击事件绑定事件监听器
+
+        //若去掉此处，列表项前的小图标将不会显示！！！
+        //http://www.apkbus.com/android-181878-1-1.html
+        try {
+            Field mpopup=popup.getClass().getDeclaredField("mPopup");
+            mpopup.setAccessible(true);
+            MenuPopupHelper mPopup = (MenuPopupHelper) mpopup.get(popup);
+            mPopup.setForceShowIcon(true);
+        } catch (Exception e) {
+
+        }
         popup.show();
+
+        // 为popup菜单的菜单项单击事件绑定事件监听器
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
                 // 使用Toast显示用户单击的菜单项
-                Toast.makeText(getActivity(),
-                        "您单击了【" + item.getTitle() + "】菜单项"
-                        , Toast.LENGTH_SHORT).show();
+                activityUtils.showToast( "您单击了【" + item.getTitle() + "】菜单项");
                 return true;
             }
         });

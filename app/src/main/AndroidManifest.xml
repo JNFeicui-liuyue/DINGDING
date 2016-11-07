@@ -33,6 +33,11 @@
             android:value="1280"/>
 
         <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activity.RegisterActivity">
         </activity>
@@ -47,11 +52,7 @@
         <activity android:name=".activity.SetLoginCodeActivity">
         </activity>
         <activity android:name=".activity.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".activity.LogoActivity">
         </activity>
@@ -79,17 +80,21 @@
         </activity>
         <activity android:name=".activity.AboutDingdingActivity">
         </activity>
-        <activity android:name=".ben.dialog.HeadPortraitDialog">
-        </activity>
         <activity android:name=".activity.SelectPhotoActivity">
-        </activity>
-        <activity android:name=".ben.dialog.ModifyNickDialog">
         </activity>
         <activity android:name=".activity.AccountProtectActivity">
         </activity>
         <activity android:name=".activity.InputNewNumberActivity">
         </activity>
         <activity android:name=".activity.SecurityPwdLockActivity">
+        </activity>
+        <activity android:name=".activity.BlacklistActivity">
+        </activity>
+        <activity android:name=".activity.SharePhonenumberActivity">
+        </activity>
+        <activity android:name=".activity.RegionActivity">
+        </activity>
+        <activity android:name=".activity.SearchActivity">
         </activity>
     </application>
 

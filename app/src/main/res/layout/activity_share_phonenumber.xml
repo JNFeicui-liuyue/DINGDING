@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_share_phonenumber"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.example.dingding.activity.SharePhonenumberActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_share_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#EAECED"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="300px"
+            android:src="@mipmap/blacklist"
+            android:layout_gravity="center"
+            android:layout_width="250px"
+            android:layout_height="250px"/>
+
+        <TextView
+            android:textSize="20sp"
+            android:text="没有共享的好友                                                                         在好友的个人详情页点击’更多-向好友共享手机号‘进行分享"
+            android:gravity="center"
+            android:layout_margin="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_dingfragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context="com.example.dingding.fragment.DINGFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+    <RelativeLayout
+        android:background="#99eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    <TextView
+        android:text="全部"
+        android:id="@+id/tv_all"
+        android:layout_marginLeft="20px"
+        android:textSize="23sp"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/small_text_tip_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/iv_new_DING"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cspace_files_search"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_toLeftOf="@+id/iv_new_DING"
+        android:id="@+id/iv_search"
+        android:layout_marginRight="30px"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cspace_files_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/iv_start_distrub"
+        android:layout_marginRight="30px"
+        android:layout_toLeftOf="@+id/iv_search"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/_uidic_forms_toggle_bg_on"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_close_distrub"
+        android:layout_marginRight="30px"
+        android:layout_toLeftOf="@+id/iv_search"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/_uidic_forms_toggle_bg_off"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/line1"
+        android:background="#d5d5d9"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

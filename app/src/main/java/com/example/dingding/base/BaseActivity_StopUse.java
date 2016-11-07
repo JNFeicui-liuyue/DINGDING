@@ -182,7 +182,7 @@ public abstract class BaseActivity_StopUse extends AppCompatActivity implements
 
     /***************************************************************************
      *
-     * [重写：1.是否沉浸状态栏 2.页面跳转 3.携带数据的页面跳转 4.加载主视图 5.加载布局文件
+     * [重写：1.是否沉浸状态栏 2.页面跳转 contact_profile_header_blacklist3.携带数据的页面跳转 4.加载主视图 5.加载布局文件
      * 6.含有Bundle通过Class打开编辑界面 7.是否允许全屏 6.是否设置沉浸状态栏
      * 9.是否允许屏幕旋转 10.日志输出  11.防止快速点击 12.重写内部类]
      *
@@ -363,7 +363,7 @@ public abstract class BaseActivity_StopUse extends AppCompatActivity implements
 
     /********************************************************************************
      *
-     * [1.绑定布局 2.初始化控件 3.View点击事件4.初始化Handler 5.初始化Bundle参数
+     * [1.绑定布局 2.初始化控件 contact_profile_header_blacklist3.View点击事件4.初始化Handler 5.初始化Bundle参数
      * 6.初始化其他数据 7.业务操作 8.物理键监听]
      *
      ********************************************************************************/

@@ -115,16 +115,19 @@ public class LoginActivity extends AutoLayoutActivity {
         if (TextUtils.isEmpty(telephone) || TextUtils.isEmpty(password)){
             activityUtils.showToast("请输入手机号或密码");
         } else {
+            Log.e(TAG, "loginJump: =========1=============" );
             mProgressDialog = ProgressDialog.show(this, "", "登陆中,请稍后...");
-
+            activityUtils.hideSoftKeyboard();
+            Log.e(TAG, "loginJump: ==========2============" );
             mLoginUpBean = new LoginUpBean();
             mLoginUpBean.setAccount(telephone);
             mLoginUpBean.setUpwd(password);
             String gson = new Gson().toJson(mLoginUpBean);
-
+            Log.e(TAG, "loginJump: ======================" );
             mLoginConnection = new LoginConnection(gson,mHandler);
 
             activityUtils.startActivity(MainActivity.class);
+//            mProgressDialog.dismiss();
             finish();
         }
     }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 
 import com.example.dingding.ben.bean.LoginBean;
 import com.example.dingding.ben.commons.Validate;
@@ -16,6 +17,8 @@ import java.lang.reflect.Type;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.security.auth.login.LoginException;
 
 /**
  * Created by Administrator on 2016/10/31.
@@ -34,6 +37,7 @@ public class LoginConnection extends Thread {
     private Handler handler, mhandler;
     private Bundle bundle;
     private Message mesg;
+    private static final String TAG = "LoginConnection";
 
     public LoginConnection(String json, Handler _handler) {
         data = json;
@@ -79,14 +83,18 @@ public class LoginConnection extends Thread {
             String _path = MessageFormat.format(Contact.format, Contact.SERVER_ADDRESS);
             String _action = Contact.loginaction;
             String _json = data;
+            Log.e("tag", "run: ======logconn================");
 //            KL.d(_path);
 //            KL.json("LoginConnection_json========", _json);
+            Log.e(TAG, "run:json============ "+_json );
+            Log.e(TAG, "run:path============ "+_path );
+            Log.e(TAG, "run: _action=============="+_action );
             OkHttpHelper.getInstance().postConn(_path,_action, _json,mhandler,"String");
         } else {
             _rev = "{success:true,msg:登录成功!!,userId:用户GID,pname:\"用户名:张丽  部门:教务处\",items:[" +
                     "{splx:1,sjhqlj:\"www.baidu.com1\",viewtype:4,dspsl:0},"+
                     "{splx:2,sjhqlj:\"www.baidu.com2\",viewtype:4,dspsl:0},"+
-                    "{splx:3,sjhqlj:\"www.baidu.com3\",viewtype:4,dspsl:0},"+
+                    "{splx:contact_profile_header_blacklist3,sjhqlj:\"www.baidu.com3\",viewtype:4,dspsl:0},"+
                     "{splx:7,sjhqlj:\"www.baidu.com7\",viewtype:4,dspsl:0},"+
                     "{splx:8,sjhqlj:\"www.baidu.com8\",viewtype:4,dspsl:0},"+
                     "{splx:9,sjhqlj:\"www.baidu.com9\",viewtype:4,dspsl:0},"+

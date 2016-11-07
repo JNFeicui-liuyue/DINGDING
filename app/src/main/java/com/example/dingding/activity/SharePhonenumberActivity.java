@@ -12,18 +12,17 @@ import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class NewInformationActivity extends AutoLayoutActivity {
+public class SharePhonenumberActivity extends AutoLayoutActivity {
 
     private ActivityUtils mActivityUtils;
 
-    @Bind(R.id.actionbar_new_message)HMActionBar mHMActionBar;
+    @Bind(R.id.actionbar_share_phonenumber)HMActionBar mHMActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_information);
+        setContentView(R.layout.activity_share_phonenumber);
         mActivityUtils = new ActivityUtils(this);
     }
 
@@ -39,23 +38,15 @@ public class NewInformationActivity extends AutoLayoutActivity {
      * 顶部标题栏
      */
     private  void setActionBar(){
-        mHMActionBar.setLeftText("新消息通知");
+        mHMActionBar.setLeftText("共享手机号码");
         mHMActionBar.setBackIcon(R.drawable.ic_arrow_back_black_24dp);
         mHMActionBar.setBackIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mActivityUtils.startActivity(SettingActivity.class);
+                mActivityUtils.startActivity(PrivacyActivity.class);
                 finish();
             }
         });
-    }
-
-    /**
-     * 接收新消息通知
-     */
-    @OnClick(R.id.iv_receive_new_message)
-    public void receiveNewMessage(){
-
     }
 
     /**
@@ -67,7 +58,7 @@ public class NewInformationActivity extends AutoLayoutActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
-                mActivityUtils.startActivity(SettingActivity.class);
+                mActivityUtils.startActivity(PrivacyActivity.class);
                 finish();
                 return false;
         }
