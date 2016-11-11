@@ -32,6 +32,7 @@ public class HMActionBar extends RelativeLayout {
     private ImageView mIvIcon;
     private ImageView mIvSearch;
     private ImageView mIvMore;
+    private ImageView mIvRightIcon;
     private Button mRightViewBtn;
     private View mView;
 
@@ -72,6 +73,7 @@ public class HMActionBar extends RelativeLayout {
         mIvIcon = (ImageView) mRootView.findViewById(R.id.imageView);
         mIvSearch = (ImageView) mRootView.findViewById(R.id.iv_search);
         mIvMore = (ImageView) mRootView.findViewById(R.id.iv_more);
+        mIvRightIcon = (ImageView) mRootView.findViewById(R.id.iv_right_icon);
         mRightViewBtn = (Button) mRootView.findViewById(R.id.actionbar_right_btn);
         mView = mRootView.findViewById(R.id.actionbar_line);
         setListeners();
@@ -108,35 +110,66 @@ public class HMActionBar extends RelativeLayout {
 
     }
 
-    public void setIvSearch(){
+    /**
+     * 右侧搜索图标
+     */
+    public void setIvSearch(int resId){
         if (mIvSearch != null){
-//            mIvSearch.setImageResource(resId);
+            mIvSearch.setImageResource(resId);
             mIvSearch.setVisibility(VISIBLE);
         }
-
     }
 
-    public void setIvMore(){
+    /**
+     * 右侧搜索图标的监听事件
+     */
+    public void setIvSearchOnClickListener(OnClickListener listener) {
+        if (mIvSearch != null) {
+            this.mIvSearch.setOnClickListener(listener);
+        }
+    }
+
+    /**
+     * 右侧图标(主要是+，其他的视具体情况修改)
+     */
+    public void setIvMore(int resId){
         if (mIvMore != null){
-//            mIvMore.setImageResource(resId);
+            mIvMore.setImageResource(resId);
             mIvMore.setVisibility(VISIBLE);
         }
+    }
 
+    /**
+     * 右侧图标(主要是+，其他的视具体情况修改)的监听事件
+     */
+    public void setIvMoreOnClickListener(OnClickListener listener) {
+        if (mIvMore != null) {
+            this.mIvMore.setOnClickListener(listener);
+        }
+    }
+
+    /**
+     * 联系人右侧添加图标
+     * @param resId
+     */
+    public void setIvRightIconResource(int resId) {
+        if (mIvRightIcon != null) {
+            mIvRightIcon.setImageResource(resId);
+            mIvRightIcon.setVisibility(View.VISIBLE);
+        }
+    }
+
+    /**
+     * 联系人右侧添加联系人的监听
+     * @param listener
+     */
+    public void setIvRightIconOnClickListener(OnClickListener listener){
+        if (mIvRightIcon != null){
+            this.mIvRightIcon.setOnClickListener(listener);
+        }
     }
 
     public void setBackIconOnClickListener(OnClickListener listener) {
-        if (mImageViewBack != null) {
-            this.mImageViewBack.setOnClickListener(listener);
-        }
-    }
-
-    public void setIvSearchOnClickListener(OnClickListener listener) {
-        if (mImageViewBack != null) {
-            this.mImageViewBack.setOnClickListener(listener);
-        }
-    }
-
-    public void setIvMoreOnClickListener(OnClickListener listener) {
         if (mImageViewBack != null) {
             this.mImageViewBack.setOnClickListener(listener);
         }

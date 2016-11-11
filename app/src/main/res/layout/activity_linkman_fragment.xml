@@ -6,6 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context="com.example.dingding.fragment.LinkmanFragment">
+    tools:context=".ui.fragment.LinkmanFragment">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_linkman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
 
 </RelativeLayout>

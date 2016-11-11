@@ -6,7 +6,8 @@ import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-import com.example.dingding.activity.PrivacyPolicyActivity;
+import com.example.dingding.ui.activity.PrivacyPolicyActivity;
+
 
 /**
  * Created by Administrator on 2016/10/25.

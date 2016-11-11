@@ -6,7 +6,7 @@ import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-import com.example.dingding.activity.ServiceAgreementActivity;
+import com.example.dingding.ui.activity.ServiceAgreementActivity;
 
 /**
  * Created by Administrator on 2016/10/25.

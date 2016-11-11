@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".ui.activity.LoginActivity">
         </activity>
 
         <meta-data
@@ -32,69 +32,78 @@
             android:name="design_height"
             android:value="1280"/>
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity">
+        <activity android:name=".ui.activity.RegisterActivity">
         </activity>
-        <activity android:name=".activity.ServiceAgreementActivity">
+        <activity android:name=".ui.activity.ServiceAgreementActivity">
         </activity>
-        <activity android:name=".activity.PrivacyPolicyActivity">
+        <activity android:name=".ui.activity.PrivacyPolicyActivity">
         </activity>
-        <activity android:name=".activity.CodeVerifyActivity">
+        <activity android:name=".ui.activity.CodeVerifyActivity">
         </activity>
-        <activity android:name=".activity.CantReceiveActivity">
+        <activity android:name=".ui.activity.CantReceiveActivity">
         </activity>
-        <activity android:name=".activity.SetLoginCodeActivity">
+        <activity android:name=".ui.activity.SetLoginCodeActivity">
         </activity>
-        <activity android:name=".activity.SplashActivity">
-
+        <activity android:name=".ui.activity.SplashActivity">
         </activity>
-        <activity android:name=".activity.LogoActivity">
+        <activity android:name=".ui.activity.LogoActivity">
         </activity>
-        <activity android:name=".activity.CountryActivity">
+        <activity android:name=".ui.activity.CountryActivity">
         </activity>
-        <activity android:name=".activity.MyRedPacketActivity">
+        <activity android:name=".ui.activity.MyRedPacketActivity">
         </activity>
-        <activity android:name=".activity.MyCollectionActivity">
+        <activity android:name=".ui.activity.MyCollectionActivity">
         </activity>
-        <activity android:name=".activity.InvitationActivity">
+        <activity android:name=".ui.activity.InvitationActivity">
         </activity>
-        <activity android:name=".activity.SettingActivity">
+        <activity android:name=".ui.activity.SettingActivity">
         </activity>
-        <activity android:name=".activity.MyInfomationActivity">
+        <activity android:name=".ui.activity.MyInfomationActivity">
         </activity>
-        <activity android:name=".activity.AccountAndSecurityActivity">
+        <activity android:name=".ui.activity.AccountAndSecurityActivity">
         </activity>
-        <activity android:name=".activity.NewInformationActivity">
+        <activity android:name=".ui.activity.NewInformationActivity">
         </activity>
-        <activity android:name=".activity.NoDistrubActivity">
+        <activity android:name=".ui.activity.NoDistrubActivity">
         </activity>
-        <activity android:name=".activity.PrivacyActivity">
+        <activity android:name=".ui.activity.PrivacyActivity">
         </activity>
-        <activity android:name=".activity.UniversalActivity">
+        <activity android:name=".ui.activity.UniversalActivity">
         </activity>
-        <activity android:name=".activity.AboutDingdingActivity">
+        <activity android:name=".ui.activity.AboutDingdingActivity">
         </activity>
-        <activity android:name=".activity.SelectPhotoActivity">
+        <activity android:name=".ui.activity.SelectPhotoActivity">
         </activity>
-        <activity android:name=".activity.AccountProtectActivity">
+        <activity android:name=".ui.activity.AccountProtectActivity">
         </activity>
-        <activity android:name=".activity.InputNewNumberActivity">
+        <activity android:name=".ui.activity.InputNewNumberActivity">
         </activity>
-        <activity android:name=".activity.SecurityPwdLockActivity">
+        <activity android:name=".ui.activity.SecurityPwdLockActivity">
         </activity>
-        <activity android:name=".activity.BlacklistActivity">
+        <activity android:name=".ui.activity.BlacklistActivity">
         </activity>
-        <activity android:name=".activity.SharePhonenumberActivity">
+        <activity android:name=".ui.activity.SharePhonenumberActivity">
         </activity>
-        <activity android:name=".activity.RegionActivity">
+        <activity android:name=".ui.activity.RegionActivity">
         </activity>
-        <activity android:name=".activity.SearchActivity">
+        <activity android:name=".ui.activity.SearchActivity">
+        </activity>
+        <activity android:name=".ui.activity.AddLinkmanActivity">
+        </activity>
+        <activity android:name=".ui.activity.SearchDINGActivity">
+        </activity>
+        <activity android:name=".ui.fragment.MyReceiveFragment">
+        </activity>
+        <activity android:name=".ui.fragment.MySendFragment">
+        </activity>
+        <activity android:name=".ui.activity.HelpActivity">
         </activity>
     </application>
 

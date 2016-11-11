@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
-    tools:context="com.example.dingding.activity.MyInfomationActivity">
+    tools:context=".ui.activity.MyInfomationActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_my_info"
@@ -53,7 +53,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -96,7 +96,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -138,7 +138,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -183,7 +183,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -217,7 +217,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -251,7 +251,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -285,7 +285,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>

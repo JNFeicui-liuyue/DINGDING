@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
-    tools:context="com.example.dingding.activity.UniversalActivity">
+    tools:context=".ui.activity.UniversalActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_universal"

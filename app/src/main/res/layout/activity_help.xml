@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEF3"
+    tools:context="com.example.dingding.ui.activity.HelpActivity">
+
+    <com.example.dingding.ben.utils.HMActionBar
+        android:id="@+id/actionbar_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.dingding.ben.utils.HMActionBar>
+    
+    <Space
+        android:id="@+id/space1"
+        android:layout_below="@+id/actionbar_help"
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+
+    <LinearLayout
+        android:id="@+id/lineaLayout"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space1">
+
+        <TextView
+            android:id="@+id/tv_red_packets_help1"
+            android:background="#fff"
+            android:text="红包有哪些类型？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help2"
+            android:background="#fff"
+            android:text="红包支付限额？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help3"
+            android:background="#fff"
+            android:text="如何发红包？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help4"
+            android:background="#fff"
+            android:text="发红包支持哪些支付方式？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help5"
+            android:background="#fff"
+            android:text="单次最多发放多少红包？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help6"
+            android:background="#fff"
+            android:text="未领取完的红包如何处理？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help7"
+            android:background="#fff"
+            android:text="如何查看红包发送/收到记录？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_help8"
+            android:background="#fff"
+            android:text="如何提现红包余额？"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="10px"
+            android:drawableRight="@drawable/common_cell_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20px"/>
+
+        <TextView
+            android:id="@+id/tv_red_packets_load_more"
+            android:background="#fff"
+            android:text="加载更多"
+            android:textSize="18sp"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:gravity="center"
+            android:drawablePadding="10px"
+            android:layout_width="match_parent"
+            android:layout_height="90px"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50px"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+
+        <TextView
+            android:id="@+id/tv_red_packets_help9"
+            android:text="还没解决您的问题？"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_red_packets_help10"
+            android:layout_marginRight="10px"
+            android:src="@drawable/ic_help_message"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/tv_red_packets_help10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_red_packets_help10"
+            android:textColor="#2397EB"
+            android:text="人工服务"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</RelativeLayout>

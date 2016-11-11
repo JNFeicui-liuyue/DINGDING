@@ -5,7 +5,7 @@
     android:id="@+id/activity_my_collection"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dingding.activity.MyCollectionActivity">
+    tools:context=".ui.activity.MyCollectionActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_collection"

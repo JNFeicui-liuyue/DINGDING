@@ -5,7 +5,7 @@
     android:id="@+id/activity_invitation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dingding.activity.InvitationActivity">
+    tools:context=".ui.activity.InvitationActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_invitation"

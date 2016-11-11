@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical"
-    tools:context="com.example.dingding.activity.InputNewNumberActivity">
+    tools:context=".ui.activity.InputNewNumberActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_input_new_number"

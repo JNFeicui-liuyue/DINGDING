@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.dingding.activity.NoDistrubActivity">
+    tools:context=".ui.activity.NoDistrubActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_no_distrub"

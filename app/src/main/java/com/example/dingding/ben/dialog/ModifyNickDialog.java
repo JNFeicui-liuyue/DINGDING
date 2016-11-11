@@ -3,20 +3,16 @@ package com.example.dingding.ben.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.dingding.R;
-import com.example.dingding.activity.CountryActivity;
-import com.example.dingding.activity.LoginActivity;
-import com.example.dingding.activity.MyInfomationActivity;
-
-import static android.app.Activity.RESULT_OK;
+import com.example.dingding.ui.activity.CountryActivity;
+import com.example.dingding.ui.activity.LoginActivity;
+import com.example.dingding.ui.activity.MyInfomationActivity;
 
 public class ModifyNickDialog extends Dialog {
 

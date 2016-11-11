@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
-    tools:context="com.example.dingding.activity.SharePhonenumberActivity">
+    tools:context=".ui.activity.SharePhonenumberActivity">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_share_phonenumber"

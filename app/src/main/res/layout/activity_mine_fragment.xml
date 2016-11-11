@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    tools:context="com.example.dingding.fragment.MineFragment">
+    tools:context=".ui.fragment.MineFragment">
 
     <com.example.dingding.ben.utils.HMActionBar
         android:id="@+id/actionbar_mine"
@@ -65,7 +65,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -115,7 +115,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -155,7 +155,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -204,7 +204,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
@@ -253,7 +253,7 @@
             android:layout_marginRight="30px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/common_cell_arrow1"
+            android:src="@drawable/common_cell_arrow1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </RelativeLayout>
